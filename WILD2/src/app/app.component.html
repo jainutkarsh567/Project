@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<body>
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <hr>
+</div>
+<nav>
+  <a routerLink ="/home"><button  style='margin-right:10px' ><pre>HOME</pre></button></a>
+
+<a routerLink ="/animals"><button style='margin-right:10px'><pre>ANIMALS</pre></button></a>
+
+
+<a routerLink ="/gallery"><button style='margin-right:10px'><pre>GALLERY</pre></button></a>
+<a routerLink ="/login"><button style='margin-left:900px'><pre>LOGIN</pre></button></a>
+<a routerLink ="/signup-form"><button style='margin-left:10px'><pre>SIGN-U</pre></button></a>
+
+</nav>
+<hr>
+<router-outlet></router-outlet>
+
+<a routerLink="/add-animal"><button style='margin-left:650px; color: green'>ADD</button></a>
+
+</body>

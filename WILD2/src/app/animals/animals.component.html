@@ -1,0 +1,22 @@
+<p>
+  ANIMALS:
+</p>
+<ul>
+	<li *ngFor="let i of anima ">
+		<a routerLink="/animal-detail/{{i.id}}">
+		<span>{{i.id}}</span> {{i.name}}
+	</a>
+	</li>
+</ul>
+
+<form  (ngSubmit) ="onDetail()"  action = "/Details" method="get">
+<button class="btn btn-success" type="submit" >DETAILS</button> <br><br>
+<div *ngFor ="let user of users" >
+	<ul class="list-group">
+		<li class="list-group-item"> NAME: {{user.name}}</li>
+		<li class="list-group-item"> ID: {{user.id}}</li>
+	</ul>
+	</div>
+</form>
+
+{{message}}

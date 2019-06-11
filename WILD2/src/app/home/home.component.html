@@ -1,0 +1,7 @@
+<div class="grid grid-pad">
+  <a *ngFor="let i of anima" class="col-1-4" routerLink="/animal-detail/{{i.id}}">
+    <div class="module i">
+      <h4>{{i.name}}</h4>
+    </div>
+  </a>
+</div>
