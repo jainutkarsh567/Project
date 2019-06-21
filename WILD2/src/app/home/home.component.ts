@@ -8,14 +8,31 @@ import {Animal1Service} from '../animal1.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-	anima: ANIMAL[]=[];
-  constructor(private animalService: Animal1Service) {}
+user:any
+	//anima: ANIMAL[]=[];
+  show: boolean;
+  constructor(private animalService: Animal1Service) {
+   this.user=this.animalService.userFromService.uname;
+   if(sessionStorage.getItem('username'))
+   {
+   this.show=true;
+   }
+   else
+   {
+   this.show=false;
+   }
+  }
+
 
   ngOnInit() {
-  this.getAnimals();
+  //this.getAnimals();
+   console.log("home" + localStorage.getItem('username'));
   }
-  getAnimals(): void{
-  this.animalService.getAnimals().subscribe(anima => this.anima = anima.slice(1,5));
-  }
+  //getAnimals(): void
+//  {
+  //this.animalService.getAnimals().subscribe(anima => this.anima = anima.slice(1,5));
+  //}
+
+
 
 }

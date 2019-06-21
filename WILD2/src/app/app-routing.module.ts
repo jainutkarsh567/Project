@@ -6,7 +6,9 @@ import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './login/login.component';
 import {AnimalDetailComponent} from './animal-detail/animal-detail.component';
 import {SignupFormComponent} from './signup-form/signup-form.component'; 
+import {ProfileComponent} from './Profile/Profile.component';
 import {AddAnimalComponent} from './add-animal/add-animal.component';
+import {ForgotPasswordComponent} from './forgot-password/forgot-password.component';
 const routes: Routes = [
 {path: '', redirectTo: '/home', pathMatch: 'full'}, 
 {path : 'animals', component: AnimalsComponent},
@@ -16,7 +18,8 @@ const routes: Routes = [
 { path: 'animal-detail/:id', component: AnimalDetailComponent},
 {path: 'signup-form', component: SignupFormComponent},
 {path: 'add-animal', component: AddAnimalComponent},
-{path: '', redirectTo:'/home', pathMatch: 'full'}
+{path: 'Profile', component: ProfileComponent},
+{path: 'forgot-password', component: ForgotPasswordComponent}
 ];
 
 @NgModule({

@@ -17,6 +17,14 @@ import { HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 export class Animal1Service {
 user: any
 s:any
+ dataFromService: any
+ userFromService={
+ username:'',
+  uname:'',
+  age: '',
+  gender:'',
+ }
+
   constructor(public http : HttpClient) {
    }
   getAnimals() :Observable <ANIMAL[]>
@@ -36,10 +44,19 @@ s:any
   
   }
   onCheck(user): Observable<any>{
-  return this.http.post('http://localhost:8080/WILD1/Add',user).pipe(map(res => res));
+  return this.http.post('http://localhost:8080/WILD1/Login?',user).pipe(map(res => res));
   }
   onSign_Up(user) : Observable<any>
   {
    return this.http.post('http://localhost:8080/WILD1/Add',user).pipe(map(res => res));
+  }
+  forgotPassword(user) : Observable<any>
+  {
+  return this.http.post('http://localhost:8080/WILD1/Forgot?',user).pipe(map(res => res));
+  }
+
+  onProfile(user) : Observable<any>
+  {
+  return this.http.post('http://localhost:8080/WILD1/Profile?',user).pipe(map(res => res));
   }
 }

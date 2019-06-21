@@ -4,6 +4,7 @@ import {FormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnimalsComponent } from './animals/animals.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { AddAnimalComponent } from './add-animal/add-animal.component';
 import {InterceptorModule} from './interceptor.module';
+import { ProfileComponent } from './Profile/Profile.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import {InterceptorModule} from './interceptor.module';
     HomeComponent,
     LoginComponent,
     SignupFormComponent,
-    AddAnimalComponent
+    AddAnimalComponent,
+    ForgotPasswordComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
