@@ -36,27 +36,27 @@ s:any
   }
   getDetails():Observable <any>
   {
-  return this.http.get('/WILD1/Add').pipe(map(res => res));
+  return this.http.get('http://146.148.41.170/WILD1/Add').pipe(map(res => res));
   }
   addUser(user): Observable <any>{
    
-  return this.http.post('/WILD1/Add',user).pipe(map(res => res));
+  return this.http.post('http://146.148.41.170/WILD1/Add',user).pipe(map(res => res));
   
   }
   onCheck(user): Observable<any>{
-  return this.http.post('/WILD1/Login?',user).pipe(map(res => res));
+  return this.http.post('http://146.148.41.170/WILD1/Login?',user).pipe(map(res => res));
   }
   onSign_Up(user) : Observable<any>
   {
-   return this.http.post('/WILD1/Add',user).pipe(map(res => res));
+   return this.http.post('http://146.148.41.170/WILD1/Add',user).pipe(map(res => res));
   }
   forgotPassword(user) : Observable<any>
   {
-  return this.http.post('/WILD1/Forgot?',user).pipe(map(res => res));
+  return this.http.post('http://146.148.41.170/WILD1/Forgot?',user).pipe(map(res => res));
   }
 
   onProfile(user) : Observable<any>
   {
-  return this.http.post('/WILD1/Profile?',user).pipe(map(res => res));
+  return this.http.post('http://146.148.41.170/WILD1/Profile?',user).pipe(map(res => res));
   }
 }
